@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Validate account</title>
+</head>
+<body>
+<script>
+    function isAccount(str) {
+        let regexp = /^[_a-z0-9]{6,}$/;
+        if (regexp.test(str)) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
+    let account = "123abc_";
+    console.log(isAccount(account));
+    account = "12345";
+    console.log(isAccount(account));
+</script>
+</body>
+</html>
